@@ -7,7 +7,6 @@ import useWindowSize from "../hooks/useWindowSize";
 import useViewportDetect from "../hooks/useViewportDetect";
 import useBrowserDetect from "../hooks/useBrowserDetect";
 
-
 const Main = (props) => {
 
   // Hooks

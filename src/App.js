@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 
 // Styles
 import "./assets/scss/main.scss";
+
 // Components
 import Scrollbar from "./components/Scrollbar";
 import Cursor from "./components/Cursor";
 import Main from "./components/Main";
-
 
 const App = () => {
 
