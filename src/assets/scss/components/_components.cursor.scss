@@ -1,5 +1,5 @@
 /* ==========================================================================
-#CAROUSEL
+#CURSOR
 ========================================================================== */
 
 .c-cursor {
@@ -18,12 +18,27 @@
   pointer-events: none;
   z-index: 1;
 
-  &.is-blurred {
+  &.is-chrome {
     backdrop-filter: blur(2px) hue-rotate(100deg) invert(75%) brightness(2);
     &::before {
       display: none;
     }
   }
+  &.is-firefox {
+    background-color: var(--error);
+    &.is-active {
+      background-color: var(--white);
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    transform: scale(4);
+    -ms-transform: scale(4);
+  }
+
 
   $b: &;
 
@@ -41,16 +56,15 @@
     transform-origin: 50% 50%;
   }
 
-  &.is-active {
-    transform: scale(4);
-  }
-
   &__text {
     color: var(--grey-dark);
     text-transform: uppercase;
     text-align: center;
     transform: scale(.22) translateY(-.2rem);
     z-index: 999;
+    #{$b}.is-firefox & {
+      transform: scale(.22) translateY(.3rem);
+    }
   }
 
 }

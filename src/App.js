@@ -4,12 +4,30 @@ import React, { useState, useEffect, useRef } from 'react';
 // Styles
 import "./assets/scss/main.scss";
 
+// Hooks
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
 // Components
 import Scrollbar from "./components/Scrollbar";
 import Cursor from "./components/Cursor";
 import Main from "./components/Main";
 
 const App = () => {
+
+  const animation = useAnimation();
+  const [contentRef, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-300px",
+  })
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible")
+    }else {
+      animation.start("hidden")
+    }
+  }, [animation, inView])
 
   return (
     <>
@@ -22,9 +40,22 @@ const App = () => {
         <section className="o-container">
           <h1>Hello World</h1>
         </section>
-        <section className="o-container">
+        <motion.section
+          className="o-container"
+          ref={contentRef}
+          animate={animation}
+          initial="hidden"
+          variants={{
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] },
+            },
+            hidden: { opacity: 0, y: 72 },
+          }}
+        >
           <h1>Hello World</h1>
-        </section>
+        </motion.section>
       </Main>
     </>
   );

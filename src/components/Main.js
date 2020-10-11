@@ -13,6 +13,7 @@ const Main = (props) => {
   // useRef
   const main = useRef();
 
+
   // Configs
   const data = {
     ease: 0.1,
@@ -32,7 +33,7 @@ const Main = (props) => {
     root.classList.add("o-wrapper__root");
   },[])
 
-  // Set class to #root
+  // Set body height once page is resized.
   useEffect(()=> {
     document.body.style.height = `${ main.current.getBoundingClientRect().height}px`;
   },[windowSize.height])
@@ -52,10 +53,10 @@ const Main = (props) => {
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
-    //Assign skew and smooth scrolling to the scroll container
+    // Assign skew and smooth scrolling to element with the scroll.
     main.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
 
-    //loop vai raf
+    // Loop through requestAnimationFrame.
     requestAnimationFrame(() => skewScrolling());
 
   };
