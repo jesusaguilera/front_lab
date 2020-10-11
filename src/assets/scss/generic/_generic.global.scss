@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  outline: 0px solid;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0px solid;
+  }
+
+}
+
+html {
+  -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar on Firefox */
+  scroll-snap-type: y mandatory;
+  cursor: none;
+}
+
+// Hide Scrollbar
+::-webkit-scrollbar {
+  display: none;
+}
+
+

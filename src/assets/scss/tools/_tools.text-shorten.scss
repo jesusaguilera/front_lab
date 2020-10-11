@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #TEXT SHORTEN
+   ========================================================================== */
+
+@mixin text-shorten {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+
+/* 
+ * Use:  
+    .username {
+        @include text-shorten();
+    }
+ */

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.c-header {
+
+  width: 100%;
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-right: $size-l;
+  padding-left: $size-l;
+  z-index: $zindex-fixed;
+
+}

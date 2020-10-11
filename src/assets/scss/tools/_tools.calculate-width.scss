@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #CALCULATE WIDTH
+   ========================================================================== */
+
+@function calculate-width ($col-span) {
+    @return 100% / $col-span 
+}
+
+
+/* 
+ * Use:  
+ * width: calculate-width(2); // spans 2 columns, width = 50% 
+ * width: calculate-width(3); // spans 3 columns, width = 33.3%
+ */

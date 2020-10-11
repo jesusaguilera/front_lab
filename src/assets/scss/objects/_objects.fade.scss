@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #FADE
+   ========================================================================== */
+
+.o-fade {
+  transition: all 1250ms ease-in;
+  max-height: 300rem;
+  opacity: 0;
+
+  &--enter {
+    position: absolute;
+    top: 300;
+    &-done {
+      opacity: 1;
+    }
+  }
+  &--exit {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}

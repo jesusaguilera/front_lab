@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #FONT FACE
+   ========================================================================== */
+
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("#{$file}.eot");
+    src: url("#{$file}.eot?#iefix") format("embedded-opentype");
+    src: url("#{$file}.woff") format("woff");
+    src: url("#{$file}.ttf") format("truetype");
+    src: url("#{$file}.svg?#webfont") format("svg");
+  }
+}
+
+@mixin font-face-ttf($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("#{$file}.ttf") format("truetype");
+  }
+}
+
+/* 
+ * Use:  
+ * @include font-face("My Font", my-font);
+ */

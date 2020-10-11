@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #HIDE
+   ========================================================================== */
+
+// Hide
+.u-hide {
+
+    display: none !important;
+
+    &\@sm {
+
+      @media #{$sm-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@sm-and-down {
+
+      @media #{$sm-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@md {
+
+      @media #{$md-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@md-and-down {
+
+      @media #{$md-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@lg {
+
+      @media #{$lg-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@lg-and-down {
+
+      @media #{$lg-and-down} {
+        display: none !important;
+      }
+
+    }
+
+    &\@xl {
+
+      @media #{$xl-and-up} {
+        display: none !important;
+      }
+
+    }
+
+    &\@print {
+
+      @media print {
+        display: none;
+
+      }
+
+    }
+
+}
+// @Hide
+

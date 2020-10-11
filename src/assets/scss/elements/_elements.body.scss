@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #BODY
+   ========================================================================== */
+
+body {
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
+  font-family: $font-family-regular;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  height: 100%;
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+  transition: all 250ms ease-in-out;
+
+  // Dark theme
+  &.t-dark {
+    --primary-color: #1661ff;
+    --secondary-color: #0c2c5d;
+
+    --grey-dark: #f3f3f3;
+    --grey-dark-rgb: 243, 243, 243;
+    --grey-medium: #919191;
+    --grey-light: #222f3e;
+    --error: #eb4d4b;
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --text-color: var(--grey-dark);
+  }
+  // @Dark theme
+
+  &.has-modal {
+    overflow: hidden;
+  }
+}

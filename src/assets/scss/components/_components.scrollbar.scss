@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #SCROLLBAR
+   ========================================================================== */
+
+.c-scrollbar {
+  transition: all 750ms ease-out;
+    transform: translate3d(0, -100%, 0);
+  background-color: var(--grey-dark) ;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  &__wrapper {
+    transition: all 350ms ease-out;
+    width: .6vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    @media #{$md-and-up} {
+      width: .27vw;
+    }
+  }
+
+}

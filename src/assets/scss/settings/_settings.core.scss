@@ -1,0 +1,119 @@
+/* ==========================================================================
+   #CORE
+   ========================================================================== */
+
+// Table of Contents:
+//
+//  1. #SET REM 1 TO 10PX
+//  2. #COLORS
+//  3. #FONTS
+//  4. #TEXTS
+//  5. #MEDIAQUERIES
+//  6. #Z-INDEX
+//  7. #SIZES
+
+// 1. #SET REM 1 TO 10PX
+:root {
+  font-size: 10px;
+}
+
+// 2. #COLORS
+:root {
+  --primary-color: #0c2c5d;
+  --secondary-color: #1661ff;
+
+  --grey-dark: #222f3e;
+  --grey-dark-rgb: 34, 47, 62;
+  --grey-medium: #919191;
+  --grey-light: #f3f3f3;
+
+  --error: #eb4d4b;
+
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255;
+  --black: #000000;
+
+  --text-color: var(--grey-dark);
+}
+
+// 3. #FONTS
+$font-family-regular: "gellix";
+$font-family-semibold: "gellix-semibold";
+$font-family-bold: "gellix-bold";
+
+// 4. #TEXTS
+$giga-size: 9.6rem;
+$mega-size: 7.2rem;
+$kilo-size: 4.8rem;
+
+$alpha-size: 3.2rem;
+$beta-size: 2.4rem;
+$gamma-size: 2rem;
+$delta-size: 1.8rem;
+$epsilon-size: 1.6rem;
+$zeta-size: 1.4rem;
+
+$font-size-milli: 1.2rem;
+$font-size-micro: 0.8rem;
+
+$font-size-large: $delta-size;
+$font-size-small: $font-size-milli;
+
+// 5. #MEDIAQUERIES
+$xxs: 320px; // iphone4 / iphone5s
+$xs: 375px; // iphone6-7-8
+$sm: 660px; // tablet 7"
+$md: 768px; // iPad
+$lg: 1024px; // iPad landscape
+$xl: 1440px; // desktops
+
+$xxs-and-up: "only screen and (min-width : #{$xxs})" !default;
+$xs-and-up: "only screen and (min-width : #{$xs})" !default;
+$sm-and-up: "only screen and (min-width : #{$sm})" !default;
+$md-and-up: "only screen and (min-width : #{$md})" !default;
+$lg-and-up: "only screen and (min-width : #{$lg})" !default;
+$xl-and-up: "only screen and (min-width : #{$xl})" !default;
+
+$xxs-and-down: "only screen and (max-width : #{$xxs})" !default;
+$xs-and-down: "only screen and (max-width : #{$xs})" !default;
+$sm-and-down: "only screen and (max-width : #{$sm})" !default;
+$md-and-down: "only screen and (max-width : #{$md})" !default;
+$lg-and-down: "only screen and (max-width : #{$lg})" !default;
+
+$xs-only: "only screen and (min-width : #{$xs}) and (max-width : #{$sm})" !default;
+$sm-only: "only screen and (min-width : #{$sm}) and (max-width : #{$md})" !default;
+$md-only: "only screen and (min-width : #{$md}) and (max-width : #{$lg})" !default;
+$lg-only: "only screen and (min-width : #{$lg}) and (max-width : #{$xl})" !default;
+
+// 6. #Z-INDEX
+$zindex-back: -10 !default;
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+// 7. #SIZES
+$size-xxs: 0.4rem !default;
+$size-xs: 0.8rem !default;
+$size-s: 1.2rem !default;
+$size-default: 1.6rem !default;
+$size-m: 1.8rem !default;
+$size-l: 2.4rem !default;
+$size-xl: 3.2rem !default;
+$size-xxl: 4.8rem !default;
+$size-kilo: 5.6rem !default;
+$size-mega: 6.4rem !default;
+$size-giga: 7.2rem !default;
+
+$container-width: 128rem !default;
+$border-radius-global: $size-xs;
+
+$padding-xxs: $size-xxs;
+$padding-xs: $size-xs;
+$padding-s: $size-s;
+$padding-default: $size-default;
+$padding-m: $size-m;
+$padding-l: $size-l;

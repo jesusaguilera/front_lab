@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Dependencies
+import React, { useState, useEffect, useRef } from 'react';
 
-function App() {
+// Styles
+import "./assets/scss/main.scss";
+
+// Components
+import Scrollbar from "./components/Scrollbar";
+import Cursor from "./components/Cursor";
+import Main from "./components/Main";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Cursor />
+      <Scrollbar />
+      <Main>
+        <section className="o-container">
+          <h1 data-cursor-hover="Go to Hello World">Hello World</h1>
+        </section>
+        <section className="o-container">
+          <h1>Hello World</h1>
+        </section>
+        <section className="o-container">
+          <h1>Hello World</h1>
+        </section>
+      </Main>
+    </>
   );
 }
 

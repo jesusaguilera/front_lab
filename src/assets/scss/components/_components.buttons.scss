@@ -1,0 +1,104 @@
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+
+.c-button {
+  transition: all 300ms ease-out;
+  background-color: var(--grey-dark);
+  border: 0.2rem solid var(--grey-dark);
+  border-radius: $size-m;
+  cursor: pointer;
+  color: var(--white);
+  font-family: $font-family-semibold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  height: 3.6rem;
+  overflow: hidden;
+  position: relative;
+  padding-right: $padding-default;
+  padding-left: $padding-default;
+  margin-top: $size-l;
+  margin-bottom: $size-default;
+
+  $b: &;
+
+  &:before {
+    background-color: var(--white);
+    content: "";
+    width: 103%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+    transition: all 300ms ease-out;
+  }
+
+  &:hover {
+    color: var(--dark-grey);
+    &:before {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--big {
+    border-radius: $size-l;
+    height: $size-xxl;
+  }
+
+  &--small {
+    border-radius: 1.4rem;
+    height: 2.8rem;
+  }
+
+  &--primary {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+  }
+
+  &--secondary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+  }
+
+  &--cancel {
+    border-color: var(--error);
+    background-color: var(--error);
+  }
+
+  &--disabled {
+    opacity: 0.27;
+    pointer-events: none;
+  }
+
+  &__text {
+    color: var(--white);
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+    #{$b}:hover & {
+      color: var(--grey-dark);
+    }
+  }
+
+  &__submit {
+    width: 12rem;
+    color: var(--white);
+    font-family: $font-family-semibold;
+    position: relative;
+    z-index: 1;
+    #{$b}:hover & {
+      color: var(--grey-dark);
+    }
+  }
+}

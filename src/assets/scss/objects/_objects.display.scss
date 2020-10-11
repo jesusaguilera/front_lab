@@ -1,0 +1,282 @@
+/* ==========================================================================
+#DISPLAY
+========================================================================== */
+
+html {
+  .o-display {
+    &--block {
+      display: block;
+      &\@sm-and-up {
+        @media #{$sm-and-up} {
+          display: block;
+        }
+      }
+      &\@md-and-up {
+        @media #{$md-and-up} {
+          display: block;
+        }
+      }
+      &\@lg-and-up {
+        @media #{$lg-and-up} {
+          display: block;
+        }
+      }
+      &\@xl-and-up {
+        @media #{$xl-and-up} {
+          display: block;
+        }
+      }
+    }
+    &--flex {
+      display: flex;
+      &\@sm-and-up {
+        @media #{$sm-and-up} {
+          display: flex;
+        }
+      }
+      &\@md-and-up {
+        @media #{$md-and-up} {
+          display: flex;
+        }
+      }
+      &\@lg-and-up {
+        @media #{$lg-and-up} {
+          display: flex;
+        }
+      }
+      &\@xl-and-up {
+        @media #{$xl-and-up} {
+          display: flex;
+        }
+      }
+      &-h-right {
+        justify-content: flex-end;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            justify-content: flex-end;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            justify-content: flex-end;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            justify-content: flex-end;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            justify-content: flex-end;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            justify-content: flex-end;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            justify-content: flex-end;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            justify-content: flex-end;
+          }
+        }
+      }
+      &-h-center {
+        justify-content: center;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            justify-content: center;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            justify-content: center;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            justify-content: center;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            justify-content: center;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            justify-content: center;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            justify-content: center;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            justify-content: center;
+          }
+        }
+      }
+      &-v-center {
+        align-items: center;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            align-items: center;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            align-items: center;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            align-items: center;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            align-items: center;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            align-items: center;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            align-items: center;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            align-items: center;
+          }
+        }
+      }
+      &-row-reverse {
+        flex-direction: row-reverse;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            flex-direction: row-reverse;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+      &-column-reverse {
+        flex-direction: colum-reverse;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            flex-direction: column-reverse;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      &-column-direction {
+        flex-direction: column;
+        &\@sm-and-up {
+          @media #{$sm-and-up} {
+            flex-direction: column;
+          }
+        }
+        &\@md-and-up {
+          @media #{$md-and-up} {
+            flex-direction: column;
+          }
+        }
+        &\@lg-and-up {
+          @media #{$lg-and-up} {
+            flex-direction: column;
+          }
+        }
+        &\@xl-and-up {
+          @media #{$xl-and-up} {
+            flex-direction: column;
+          }
+        }
+        &\@sm-only {
+          @media #{$sm-only} {
+            flex-direction: column;
+          }
+        }
+        &\@md-only {
+          @media #{$md-only} {
+            flex-direction: column;
+          }
+        }
+        &\@lg-only {
+          @media #{$lg-only} {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
