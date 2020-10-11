@@ -4,13 +4,17 @@
 
 h1 {
 
-  font-size: 10vw;
-
   transition: all 300ms ease-in-out;
+  font-family: $font-family-bold;
+  font-size: 19vw;
+  text-align: center;
 
-  @media #{$md-and-up} {
-    // font-size: $giga-size;
-    font-size: 19.16vw;
+  $b: &;
+
+  @at-root .is-firefox {
+    #{$b} {
+      font-size: 18.4vw;
+    }
   }
 
 }

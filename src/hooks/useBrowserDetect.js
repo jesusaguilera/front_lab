@@ -21,11 +21,11 @@ const useBrowserDetect = () => {
               window["safari"].pushNotification)
         ),
       isIE: /*@cc_on!@*/ false || !!document.documentMode,
-      isEdge: navigator.userAgent.indexOf("Edg") != -1,
+      isEdge: navigator.userAgent.indexOf("Edg") !== -1,
       isEdgeChromium:
         !!window.chrome &&
         (!!window.chrome.webstore || !!window.chrome.runtime) &&
-        navigator.userAgent.indexOf("Edg") != -1,
+        navigator.userAgent.indexOf("Edg") !== -1,
       isChrome:
         !!window.chrome &&
         (!!window.chrome.webstore || !!window.chrome.runtime),
@@ -42,14 +42,9 @@ const useBrowserDetect = () => {
   // useState
   const [browsers, setBrowsers] = useState(null);
 
-  // Set browsers
-  const checkBrowsers = () => {
-    setBrowsers(getBrowsers);
-  }
-
   // useEffect
   useEffect(()=> {
-    checkBrowsers();
+    setBrowsers(getBrowsers);
   }, [])
 
   return browsers;

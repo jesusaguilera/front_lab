@@ -2,26 +2,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 
-// Hooks
-import useBrowserDetect from "../hooks/useBrowserDetect";
-
 const Cursor = () => {
-
-  // Hooks
-  const browserDetect = useBrowserDetect();
 
   // useRef
   const cursor = useRef();
   const cursorText = useRef();
-
-  // useState
-  const [isChrome, setIsChrome] = useState(null);
-  const [isFirefox, setIsFirefox] = useState(null);
-
-  // useEffect
-  useEffect(()=> {
-    browserDetect && setBrowsers();
-  }, [browserDetect])
 
   // Move cursor
   useEffect(()=> {
@@ -30,12 +15,6 @@ const Cursor = () => {
       pointerOnClickedElements();
     });
   }, []);
-
-  // check browsers
-  const setBrowsers = () => {
-    setIsChrome(browserDetect.isChrome)
-    setIsFirefox(browserDetect.isFirefox)
-  }
 
   // Set pointer effect
   const pointerOnClickedElements = () => {
@@ -82,7 +61,7 @@ const Cursor = () => {
     cursor.current.setAttribute("style", `top: ${e.clientY - 8}px; left: ${e.clientX - 8}px`)
   };
 
-  const cursorClasses = classNames("c-cursor", isChrome && "is-chrome", isFirefox && "is-firefox")
+  const cursorClasses = classNames("c-cursor")
 
   return (
     <>

@@ -18,19 +18,26 @@
   pointer-events: none;
   z-index: 1;
 
-  &.is-chrome {
-    backdrop-filter: blur(2px) hue-rotate(100deg) invert(75%) brightness(2);
-    &::before {
-      display: none;
+  $b: &;
+
+  @at-root .is-chrome {
+    #{$b} {
+      backdrop-filter: blur(2px) hue-rotate(100deg) invert(75%) brightness(2);
+      &::before {
+        display: none;
+      }
     }
   }
-  &.is-firefox {
-    background-color: var(--error);
-    &.is-active {
-      background-color: var(--white);
-    }
-    &::before {
-      display: none;
+
+  @at-root .is-firefox {
+    #{$b} {
+      background-color: var(--error);
+      &.is-active {
+        background-color: var(--white);
+      }
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -40,7 +47,6 @@
   }
 
 
-  $b: &;
 
   &::before {
     transition: all .2s cubic-bezier(0.75, .075, 0.3, 1.33);
@@ -62,8 +68,10 @@
     text-align: center;
     transform: scale(.22) translateY(-.2rem);
     z-index: 999;
-    #{$b}.is-firefox & {
-      transform: scale(.22) translateY(.3rem);
+    @at-root .is-firefox {
+      #{$b}__text {
+        transform: scale(.22) translateY(.1rem);
+      }
     }
   }
 

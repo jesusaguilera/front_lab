@@ -1,6 +1,6 @@
 /* ==========================================================================
-   #FONT FACE
-   ========================================================================== */
+#FONT FACE
+========================================================================== */
 
 @mixin font-face($name, $file) {
   @font-face {
@@ -13,10 +13,10 @@
   }
 }
 
-@mixin font-face-ttf($name, $file) {
+@mixin font-face-ttf($name, $file, $local) {
   @font-face {
     font-family: "#{$name}";
-    src: url("#{$file}.ttf") format("truetype");
+    src: local("#{$local}"), url("#{$file}.ttf") format("truetype");
   }
 }
 

@@ -1,18 +1,22 @@
 // Dependencies
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 // Hooks
 import useWindowSize from "../hooks/useWindowSize";
+import useViewportDetect from "../hooks/useViewportDetect";
+import useBrowserDetect from "../hooks/useBrowserDetect";
+
 
 const Main = (props) => {
 
   // Hooks
   const windowSize = useWindowSize();
+  const viewportDetect = useViewportDetect();
+  const browserDetect = useBrowserDetect();
 
   // useRef
   const main = useRef();
-
 
   // Configs
   const data = {
@@ -37,6 +41,24 @@ const Main = (props) => {
   useEffect(()=> {
     document.body.style.height = `${ main.current.getBoundingClientRect().height}px`;
   },[windowSize.height])
+
+  useEffect(()=> {
+    document.body.style.height = `${ main.current.getBoundingClientRect().height}px`;
+  },[])
+
+  useEffect(() => {
+    if (viewportDetect) {
+      document.body.className = "";
+      viewportDetect.isDesktop && document.body.classList.add("is-desktop");
+      viewportDetect.isTablet && document.body.classList.add("is-tablet");
+      viewportDetect.isMobile && document.body.classList.add("is-mobile");
+      browserDetect.isChrome && document.body.classList.add("is-chrome");
+      browserDetect.isFirefox && document.body.classList.add("is-firefox");
+      browserDetect.isEdge && document.body.classList.add("is-edge");
+      browserDetect.isSafari && document.body.classList.add("is-safari");
+    }
+  }, [viewportDetect, browserDetect]);
+
 
   // Scrolling
   const skewScrolling = () => {

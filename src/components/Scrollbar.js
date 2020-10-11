@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 // Hooks
 import useWindowSize from "../hooks/useWindowSize";
@@ -12,10 +12,6 @@ const Scrollbar = () => {
   const scrollbar = useRef();
 
   // Run first animation
-  useEffect(() => {
-    requestAnimationFrame(() => scrolling());
-  }, []);
-
   useEffect(()=> {
     requestAnimationFrame(() => scrolling());
   },[windowSize.height])

@@ -1,17 +1,15 @@
 // Dependencies
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // Styles
 import "./assets/scss/main.scss";
-
-// Hooks
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
-
 // Components
 import Scrollbar from "./components/Scrollbar";
 import Cursor from "./components/Cursor";
 import Main from "./components/Main";
+
 
 const App = () => {
 
