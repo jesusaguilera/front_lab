@@ -1,8 +1,7 @@
 // Dependencies
 import React, { useEffect } from 'react';
 import { useInView } from "react-intersection-observer";
-import { useSpring, a, config } from "react-spring";
-import { useDrag } from "react-use-gesture";
+import { useSpring, animated, config } from "react-spring";
 
 // Components
 import Main from "../components/Main";
@@ -44,13 +43,13 @@ const Home = () => {
       <section className="o-container">
         <h1>Section 2</h1>
       </section>
-      <a.section
+      <animated.section
         className="o-container"
         ref={contentRef}
         style={springProps}
       >
-        <h1>Hello World</h1>
-      </a.section>
+        <h1>Section 3</h1>
+      </animated.section>
     </Main>
   )
 }
