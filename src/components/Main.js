@@ -27,7 +27,32 @@ const Main = (props) => {
 
   // Run scrollrender once page is loaded.
   useEffect(() => {
+
+    // Scrolling
+    const skewScrolling = () => {
+      //Set Current to the scroll position amount
+      data.current = window.scrollY;
+      // Set Previous to the scroll previous position
+      data.previous += (data.current - data.previous) * data.ease;
+      // Set rounded to
+      data.rounded = Math.floor(Math.round(data.previous * 100) / 100);
+
+      // Difference between
+      const difference = data.current - data.rounded;
+      const acceleration = difference / windowSize.width;
+      const velocity = +acceleration;
+      const skew = velocity * 7.5;
+
+      // Assign skew and smooth scrolling to element with the scroll.
+      main.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+
+      // Loop through requestAnimationFrame.
+      requestAnimationFrame(() => skewScrolling());
+
+    };
+
     requestAnimationFrame(() => skewScrolling());
+
   }, []);
 
   // Set class to #root
@@ -46,46 +71,31 @@ const Main = (props) => {
   },[])
 
   useEffect(() => {
-    if (viewportDetect) {
-      document.body.className = "";
+
+    const setViewport = () => {
       viewportDetect.isDesktop && document.body.classList.add("is-desktop");
       viewportDetect.isTablet && document.body.classList.add("is-tablet");
       viewportDetect.isMobile && document.body.classList.add("is-mobile");
+    }
+
+    const setBrowser = () => {
       browserDetect.isChrome && document.body.classList.add("is-chrome");
       browserDetect.isFirefox && document.body.classList.add("is-firefox");
       browserDetect.isEdge && document.body.classList.add("is-edge");
       browserDetect.isSafari && document.body.classList.add("is-safari");
     }
+
+    if (viewportDetect) {
+      document.body.className = "";
+      setViewport();
+      setBrowser();
+    }
   }, [viewportDetect, browserDetect]);
 
-
-  // Scrolling
-  const skewScrolling = () => {
-    //Set Current to the scroll position amount
-    data.current = window.scrollY;
-    // Set Previous to the scroll previous position
-    data.previous += (data.current - data.previous) * data.ease;
-    // Set rounded to
-    data.rounded = Math.floor(Math.round(data.previous * 100) / 100);
-
-    // Difference between
-    const difference = data.current - data.rounded;
-    const acceleration = difference / windowSize.width;
-    const velocity = +acceleration;
-    const skew = velocity * 7.5;
-
-    // Assign skew and smooth scrolling to element with the scroll.
-    main.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
-
-    // Loop through requestAnimationFrame.
-    requestAnimationFrame(() => skewScrolling());
-
-  };
-
   return (
-      <main ref={main} className="o-wrapper">
-        {props.children}
-      </main>
+    <main ref={main} className="o-wrapper">
+      {props.children}
+    </main>
   );
 };
 

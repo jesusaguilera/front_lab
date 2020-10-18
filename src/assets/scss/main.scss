@@ -35,26 +35,27 @@
 /************************************************************
  * OBJECTS 
  ************************************************************/
-@import "objects/objects.page";
+// @import "objects/objects.page";
 @import "objects/objects.wrapper";
 @import "objects/objects.container";
-@import "objects/objects.grid";
-@import "objects/objects.col";
-@import "objects/objects.list-bare";
-@import "objects/objects.list-inline";
-@import "objects/objects.form";
-@import "objects/objects.table";
-@import "objects/objects.fade";
-@import "objects/objects.display";
-@import "objects/objects.padding";
-@import "objects/objects.margin";
-@import "objects/objects.scroll-snapping";
+// @import "objects/objects.grid";
+// @import "objects/objects.col";
+// @import "objects/objects.list-bare";
+// @import "objects/objects.list-inline";
+// @import "objects/objects.form";
+// @import "objects/objects.table";
+// @import "objects/objects.fade";
+// @import "objects/objects.display";
+// @import "objects/objects.padding";
+// @import "objects/objects.margin";
+// @import "objects/objects.scroll-snapping";
 
 /************************************************************
  * COMPONENTS 
  ************************************************************/
 @import "components/components.scrollbar";
 @import "components/components.cursor";
+@import "components/components.text-split";
 // @import "components/components.header";
 // @import "components/components.buttons";
 // @import "components/components.nav";
@@ -70,12 +71,10 @@
 /************************************************************
  * UTILITIES 
  * ************************************************************/
-@import "utilities/utilities.hide";
-@import "utilities/utilities.width";
+// @import "utilities/utilities.hide";
+// @import "utilities/utilities.width";
 
 /************************************************************
  * SCOPES 
  * ************************************************************/
-@import "scopes/scopes.debug";
-
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap');
+// @import "scopes/scopes.debug";
